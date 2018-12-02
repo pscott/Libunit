@@ -13,13 +13,6 @@ jobs:
                     ! (grep -r "stdio" real_tests ||  grep -r "printf" real_tests || grep -r "////" real_tests)
                     ! (grep -r "stdio" tests ||  grep -r "printf" tests || grep -r "////" tests)
                     ! (grep -r "stdio" rendu ||  grep -r "printf" rendu || grep -r "////" rendu)
-    build:
-        docker:
-            - image: gcc:8.1.0
-        working_directory: ~/libunit
-        steps:
-            - checkout
-            - run: make -C tests test
 
 workflows:
     version: 2
