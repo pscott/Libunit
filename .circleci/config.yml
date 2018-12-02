@@ -9,7 +9,7 @@ jobs:
             - run:
                 name: Check Scripts
                 command: |
-                    ! grep -r "stdio" libunit-circle ||  grep -r "printf" libunit-circle || grep -r "////" libunit-circle
+                    ! grep -r "stdio" . ||  grep -r "printf" . || grep -r "////" .
 
 workflows:
     version: 2
