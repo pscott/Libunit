@@ -9,7 +9,7 @@ jobs:
             - run:
                 name: Check Scripts
                 command: |
-                    ! (grep -r "stdio" . ||  grep -r "printf" . || grep -r "////" .)
+                    ! (grep -r --exclude-dir=.circleci "stdio" . ||  grep -r --exclude-dir=.circleci "printf" . || grep -r --exclude-dir=.circleci "////" .)
 
 workflows:
     version: 2
