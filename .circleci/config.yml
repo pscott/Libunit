@@ -3,7 +3,7 @@ jobs:
     shellcheck:
         docker:
             - image: nlknguyen/alpine-shellcheck:v0.4.6
-        working_directory: ~/.
+        working_directory: ~/libunit
         steps:
             - checkout
             - run:
@@ -16,7 +16,7 @@ jobs:
     build:
         docker:
             - image: gcc:8.1.0
-        working_directory: ~/.
+        working_directory: ~/libunit
         steps:
             - checkout
             - run: make -C tests test
