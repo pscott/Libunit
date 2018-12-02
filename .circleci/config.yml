@@ -1,0 +1,28 @@
+version: 2
+jobs:
+    build:
+        docker:
+            - image: gcc:8
+        working_directory: ~/tests
+        steps:
+            - checkout
+            - run:
+                name: tests tests
+                command: make test
+    shellcheck:
+        docker:
+            - image: nlknguyen/alpine-shellcheck:v0.4.6
+        working_directory: ~/.
+        steps:
+            - checkout
+            - run:
+                name: Check Scripts
+                command: |
+                    ! grep -R "stdio" libunit-circle ||  grep -R "printf" libunit-circle || grep -R "////" libunit-circle
+
+workflows:
+    version: 2
+    workflow:
+        jobs:
+            - shellcheck
+            - build
