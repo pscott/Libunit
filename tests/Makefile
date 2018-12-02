@@ -6,12 +6,12 @@
 #    By: pscott <pscott@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/02 18:02:03 by pscott            #+#    #+#              #
-#    Updated: 2018/12/02 21:20:00 by pscott           ###   ########.fr        #
+#    Updated: 2018/12/02 21:22:12 by pscott           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libunit_test
-FLAGS = -w
+FLAGS = -Wall -Werror -Wextra
 
 FRAMEWORK_PATH = ../framework
 
@@ -54,7 +54,6 @@ v: $(NAME)
 clean:
 	rm -f $(OBJS)
 	make -C $(LIB_UNIT_DIR) clean
-
 
 fclean: clean
 	rm -f $(NAME)
