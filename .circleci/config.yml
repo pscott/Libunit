@@ -3,12 +3,12 @@ jobs:
     build:
         docker:
             - image: gcc:8
-        working_directory: ~/tests
+        working_directory: ~/.
         steps:
             - checkout
             - run:
                 name: tests tests
-                command: make test
+                command: make -C tests test
     shellcheck:
         docker:
             - image: nlknguyen/alpine-shellcheck:v0.4.6
