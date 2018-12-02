@@ -6,12 +6,12 @@
 #    By: pscott <pscott@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/02 18:02:03 by pscott            #+#    #+#              #
-#    Updated: 2018/12/02 18:02:04 by pscott           ###   ########.fr        #
+#    Updated: 2018/12/02 21:16:55 by pscott           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libunit_test
-FLAGS = -Wall -Werror -Wextra
+FLAGS = -Wall -Wextra
 
 FRAMEWORK_PATH = ../framework
 
