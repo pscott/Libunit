@@ -6,7 +6,7 @@
 /*   By: pscott <pscott@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/02 18:14:47 by pscott            #+#    #+#             */
-/*   Updated: 2018/12/02 18:45:48 by pscott           ###   ########.fr       */
+/*   Updated: 2018/12/02 21:10:38 by pscott           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
+# include <sys/wait.h>
 # include "libfw.h"
 
 # define TIMEOUT 6
